@@ -8,6 +8,7 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  config.webpacker.check_yarn_integrity = false
 
   # Show full error reports.
   config.consider_all_requests_local = true
@@ -17,6 +18,7 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
+
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
